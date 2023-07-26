@@ -1,0 +1,14 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = "Jens' API docs"
+theme = 'compose'
+
+[params.logo]
+  lightMode = "logo_light.png" 
+  darkMode = "logo_dark.png" 
+
+[params.meta]
+  favicon = false
+
+[outputs]
+  home = [ "HTML", "JSON"]
