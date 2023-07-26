@@ -9,7 +9,7 @@ theme = 'compose'
   title = "Jens' API docs"
 
 [params.logo]
-  lightMode = "logo_light.png" 
+  lightMode = "logo_dark.png" 
   darkMode = "logo_dark.png" 
 
 [params.meta]
