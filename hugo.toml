@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = "Jens' API docs"
 theme = 'compose'
 
+[params]
+  description = 'A collection of docs for my (otherwise undocumented) APIs'
+  images = ['logo.png']
+  title = "Jens' API docs"
+
 [params.logo]
   lightMode = "logo_light.png" 
   darkMode = "logo_dark.png" 
