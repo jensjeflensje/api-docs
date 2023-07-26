@@ -5,7 +5,7 @@ theme = 'compose'
 
 [params]
   description = 'A collection of docs for my (otherwise undocumented) APIs'
-  images = ['logo.png']
+  images = ['logo_light.png']
   title = "Jens' API docs"
 
 [params.logo]
