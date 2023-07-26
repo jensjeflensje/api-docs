@@ -5,11 +5,11 @@ theme = 'compose'
 
 [params]
   description = 'A collection of docs for my (otherwise undocumented) APIs'
-  images = ['logo_light.png']
+  images = ['logo_dark.png']
   title = "Jens' API docs"
 
 [params.logo]
-  lightMode = "logo_dark.png" 
+  lightMode = "logo_light.png" 
   darkMode = "logo_dark.png" 
 
 [params.meta]
