@@ -14,5 +14,6 @@ and API design will definitely reflect that 😛.
 
 ## 🗒️ Contents
 Currently, docs exist for:
+- [BingoMC](https://bingomc.net)
 - [Skin Renderer](https://skin-render.jensderuiter.dev)
 - [Skin Generator](https://jens.skin)
