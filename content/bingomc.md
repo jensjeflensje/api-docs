@@ -33,46 +33,40 @@ When this request fails (because of the player never having joined), you'll get 
 ```
 
 ## Get stats
-Call GET `https://bingomc.net/api/get_stats/?username=<username>` with a Minecraft UUID as the user's stats param.
+Call GET `https://bingomc.net/api/get_stats/?uuid=<uuid>` with a Minecraft UUID as the uuid stats param.
 Stats are the same as the stats that are shown ingame for the current user.
-These stats are currently scoped to multiplayer games only.
-
-When this request completes, you'll get back a response like this:
-```json
-{
-  "success": true,
-  "stats": {
-    "total_games_won": 1,
-    "total_games_played": 1,
-    "total_items_found": 1,
-    "total_hours_played": 1,
-    "avg_minutes_played": 1, // average minutes per game
-    "avg_items_found": 1, // average items per game
-    "first_game": "<iso timeformat string of the first game they played>"
-  }
-}
-```
 
 When this request fails (because of the uuid not existing or never having played), you'll get back a response like this:
 ```json
 {
-    "success": false
+  "avg_items_per_game": null,
+  "avg_time_per_game": null,
+  "avg_singleplayer_time": null,
+  "first_multiplayer_game": null,
+  "first_singleplayer_game": null,
+  "total_games_multiplayer": null,
+  "total_games_singleplayer": 0,
+  "total_games_won_multiplayer": null,
+  "total_items_found_multiplayer": null,
+  "total_items_found_singleplayer": null,
+  "total_balloons": null
 }
 ```
 
-An example value (for uuid `117bcad6-abb1-4eb8-8c50-a6c15a713c8c` in this case) would be:
+An example value would be:
 ```json
 {
-  "success": true,
-  "stats": {
-    "total_games_won": 96,
-    "total_games_played": 271,
-    "total_items_found": 915,
-    "total_hours_played": 32,
-    "avg_minutes_played": 7,
-    "avg_items_found": 3,
-    "first_game": "2022-01-07T10:48:29"
-  }
+  "avg_items_per_game": 3,
+  "avg_time_per_game": 722, // seconds
+  "avg_singleplayer_time": 32, // seconds
+  "first_multiplayer_game": "2022-01-07T10:48:29", // iso 8601
+  "first_singleplayer_game": "2022-01-07T10:48:29", // iso 8601
+  "total_games_multiplayer": 314,
+  "total_games_singleplayer": 1,
+  "total_games_won_multiplayer": 115,
+  "total_items_found_multiplayer": 1052,
+  "total_items_found_singleplayer": 16,
+  "total_balloons": 63
 }
 ```
 
@@ -96,6 +90,6 @@ When this request completes, you'll get back a response like this:
 
 To elaborate on these stats:
 - Total players is the total amount of players on the network
-- Playing players is the total amount of players playing a multiplayer game
-- Waiting servers is the amount of servers that are ready to accept players for a new multiplayer game
-- Running servers is the amount of multiplayer servers/games that are currently running (playing)
+- Playing players is the total amount of players that are ingame
+- Waiting servers is the amount of servers that are ready to accept players for new games
+- Running servers is the amount of servers/games that are currently running (playing)
