@@ -7,6 +7,9 @@ BingoMC is my Minecraft server. It features singleplayer and multiplayer bingo g
 
 Website: [https://bingomc.net](https://bingomc.net)
 
+## Looking for the Partner API?
+Partner API docs are available on [BingoMC's Notion](https://jensderouter.notion.site/Partner-API-ed6f2cd44773495d917f8ed192ae79cb).
+
 ## First things first
 This is a public API, which means you won't be able to actually change stuff. It's read only.
 The API also has a rate limit in place.
